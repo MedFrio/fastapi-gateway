@@ -23,16 +23,18 @@ Ce projet constitue l'**API Gateway** d'une application de gestion de commandes 
 
 ## 📁 Architecture
 
-api_gateway/
-├── main.py              # Point d’entrée de l’API Gateway
-├── services/            # Regroupe les routes par domaine fonctionnel
-│   ├── auth.py          # Authentification utilisateurs
-│   ├── orders.py        # Commandes client
-│   ├── kitchen.py       # Statut préparation cuisine
-│   └── delivery.py      # Livraison des commandes
-├── utils/
-│   └── http_client.py   # Gestion centralisée des requêtes HTTP (simule les microservices)
-└── requirements.txt     # Dépendances Python
+- **api_gateway/**
+  - `main.py` : Point d’entrée de l’API Gateway
+  - **services/**
+    - `auth.py` : Authentification utilisateurs
+    - `orders.py` : Commandes client
+    - `kitchen.py` : Statut préparation cuisine
+    - `delivery.py` : Livraison des commandes
+  - **utils/**
+    - `http_client.py` : Gestion centralisée des requêtes HTTP (simule les microservices)
+  - `requirements.txt` : Dépendances Python
+
+
 
 
 ---
