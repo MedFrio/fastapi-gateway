@@ -1,0 +1,44 @@
+# Environnement virtuel Python
+venv/
+.env
+*.env
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs
+*.log
+
+# Uvicorn reload file
+.reload
+
+# Fichiers temporaires
+*.swp
+*.tmp
+*.bak
+*.old
+
+# IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# MacOS
+.DS_Store
+
+# PyCharm
+*.iml
+
+# Tests
+htmlcov/
+.coverage
+.cache
+.pytest_cache/
+
+# fichiers de packaging
+dist/
+build/
+*.egg-info/
