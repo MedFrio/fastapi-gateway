@@ -27,18 +27,20 @@ Ce projet constitue l'**API Gateway** d'une application de gestion de commandes 
 ## 📁 Architecture
 
 
-api_gateway/
-├── main.py                          # Point d’entrée de l’API Gateway
-├── requirements.txt                 # Dépendances Python
-├── services/                        # Regroupe les routes par domaine fonctionnel
-│   ├── auth.py                      # Authentification fictive (démo/testing)
-│   ├── client_api.py                # Redirection vers le microservice Gestion-client-ms
-│   ├── order_api.py                 # Redirection vers le microservice de gestion des commandes
-│   ├── orders.py                    # Commandes simulées (ancien mock, facultatif)
-│   ├── kitchen.py                   # Module cuisine simulé (statut des plats)
-│   └── delivery.py                  # Module livraison simulé
-├── utils/
-    └── http_client.py               # Outil générique pour les appels HTTP simulés (test/local)
+`api_gateway/`  
+  `main.py`        # Point d’entrée de l’API Gateway  
+  `requirements.txt`   # Dépendances Python  
+
+  `services/`       # Regroupe les routes par domaine fonctionnel  
+    `auth.py`       # Authentification fictive (démo / tests)  
+    `client_api.py`   # Redirection vers le microservice Gestion-client-ms  
+    `order_api.py`    # Redirection vers le microservice des commandes  
+    `orders.py`      # Ancien module simulé de commandes (optionnel)  
+    `kitchen.py`     # Module simulé pour le suivi cuisine  
+    `delivery.py`    # Module simulé pour les livraisons  
+
+  `utils/`  
+    `http_client.py`  # Appels HTTP simulés pour tests / fallback
 
 
 ---
