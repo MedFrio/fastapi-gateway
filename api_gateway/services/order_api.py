@@ -47,3 +47,9 @@ async def create_commande(request: Request):
 async def update_commande_status(commande_id: str, request: Request):
     body = await request.json()
     return await forward("PATCH", f"/commandes/{commande_id}/status", data=body)
+
+
+@router.post("/order-api/menu")
+async def add_menu_item(request: Request):
+    body = await request.json()
+    return await forward("POST", "/menu", data=body)
