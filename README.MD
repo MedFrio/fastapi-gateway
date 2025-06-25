@@ -49,7 +49,7 @@ Ce projet constitue l'**API Gateway** d'une application de gestion de commandes 
 
 ### 1. Cloner le dépôt
 ```bash
-git clone <url_du_repo>
+git clone git@github.com:MedFrio/fastapi-gateway.git
 cd api_gateway
 ```
 ### 2. Créer et activer un environnement virtuel
