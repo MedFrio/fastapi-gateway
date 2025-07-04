@@ -1,4 +1,4 @@
-name: Build and deploy Python app to Azure Web App - gateway
+name: Deploy Python FastAPI to Azure Web App - gateway
 
 on:
   push:
@@ -14,24 +14,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          cd api_gateway
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
-
-      - name: Zip artifact for deployment
+      - name: Zip project for deployment
         run: |
           cd api_gateway
           zip -r ../release.zip .
 
-      - name: Upload artifact for deploy
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: python-app
@@ -42,7 +30,7 @@ jobs:
     needs: build-and-deploy
 
     steps:
-      - name: Download artifact from build
+      - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: python-app
