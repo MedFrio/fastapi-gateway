@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 import httpx
 
 router = APIRouter()
-BASE_URL = "http://localhost:3003"  #  microservice livreur sur le port 3003
+BASE_URL = "https://livraison-azf9bxe9fygsgfe7.canadacentral-01.azurewebsites.net"  #  microservice livreur sur le port 3003
 
 async def forward(method: str, endpoint: str, data=None):
     async with httpx.AsyncClient() as client:
