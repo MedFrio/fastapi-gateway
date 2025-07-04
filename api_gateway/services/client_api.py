@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 import httpx
 
 router = APIRouter()
-BASE_URL = "http://localhost:3001"
+BASE_URL = "https://clientms-akftckgbbvdph5gu.canadacentral-01.azurewebsites.net"
 
 async def forward(method: str, endpoint: str, data=None, token=None):
     headers = {}
