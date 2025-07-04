@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from services import client_api  # ajouter en haut
 from services import order_api  # ajout en haut
+from services import delivery_api
+
 
 
 
@@ -28,6 +30,8 @@ app.include_router(kitchen.router)
 app.include_router(delivery.router)
 app.include_router(client_api.router)  # ajouter en bas
 app.include_router(order_api.router)  # ajout en bas
+app.include_router(delivery_api.router)
+
 
 
 
